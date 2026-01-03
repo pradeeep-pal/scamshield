@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ScamShield</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🛡 ScamShield</h1>
+    <p>Detect scam messages and phishing links</p>
+
+    <form method="POST">
+        <textarea name="text" placeholder="Paste message or link here..." required></textarea>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+</div>
+
+</body>
+</html>
